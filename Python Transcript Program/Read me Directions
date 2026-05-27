@@ -1,0 +1,154 @@
+# Transcript Application
+
+## Overview
+
+The Transcript Application is a Python program designed to help users manage a simple college transcript. The program allows users to:
+
+- Add courses
+- Validate course information
+- List all courses
+- Calculate GPA
+- Update course information
+
+The application is separated into three Python files to keep the code organized and easier to maintain.
+
+---
+
+# Files Included
+
+## 1. Course.py
+
+This file contains the `Course` class.
+
+The Course class is responsible for storing information about a single course, including:
+
+- Course code
+- Semester
+- Letter grade
+
+### Main Responsibilities
+
+- Stores course data
+- Provides accessor methods (getters)
+- Provides mutator methods (setters)
+- Formats course information for printing
+
+### Example Course Object
+
+```python
+Course("IS1003", "Fall 2025", "A")
+2. validations.py
+
+This file contains all validation functions used by the program.
+
+The purpose of these functions is to make sure the user enters valid data before it is stored.
+
+Validation Functions
+validate_code()
+
+Checks if a course code follows the correct format.
+
+Valid examples:
+
+IS1003
+CS1713
+MATH1324
+validate_semester()
+
+Checks if the semester is in the proper format.
+
+Valid examples:
+
+Fall 2025
+Spring 2026
+Summer 2025
+validate_grade()
+
+Checks if the grade entered is an accepted letter grade.
+
+Accepted grades:
+
+A+, A, A-
+B+, B, B-
+C+, C, C-
+D+, D, D-
+F
+3. transcript_app.py
+
+This is the main application file.
+
+This file controls the entire program and allows the user to interact with the transcript system.
+
+Main Features
+Displays the program menu
+Allows users to add courses
+Lists courses
+Calculates GPA
+Updates courses
+Saves transcript data
+
+This file imports both:
+
+from Course import Course
+from validations import *
+
+to connect all parts of the application together.
+
+How the Program Works
+
+When the program starts, the user is shown a menu with several options.
+
+Example menu:
+
+1. Add Course
+2. List Courses
+3. Calculate GPA
+4. Exit
+
+The user enters the number of the option they want to perform.
+
+How to Run the Program
+Step 1
+
+Place all three files inside the same folder:
+
+Course.py
+validations.py
+transcript_app.py
+Step 2
+
+Open Spyder or another Python IDE.
+
+Step 3
+
+Open and run:
+
+transcript_app.py
+Example Usage
+Adding a Course
+
+Example input:
+
+Enter course code: IS1003
+Enter semester: Fall 2025
+Enter grade: A
+
+The course is then stored inside the transcript list.
+
+Calculating GPA
+
+The GPA is calculated using:
+
+Letter grade quality points
+Credit hours from the course code
+
+Example:
+
+Current GPA: 3.75
+Notes
+All files must remain in the same folder.
+Python indentation is required for the program to work correctly.
+The application uses validation functions to prevent invalid input.
+Author
+
+Chase Cantrell
